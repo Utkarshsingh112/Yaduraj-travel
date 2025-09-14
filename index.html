@@ -12,21 +12,24 @@
 <body>
 
     <header class="header">
-        <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+        <div class="container nav-container">
             <div class="logo">
                 <img src="https://rajasthantourtravel.co.in/wp-content/uploads/2022/07/WhatsApp-Image-2024-06-24-at-16.00.50-1024x1024-removebg-preview.png"
                     alt="Rajasthan Tour Travel Logo">
             </div>
-            <div class="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="hero">
+    <section class="hero" id="home">
             <h1>YADURAJ TOUR AND TRAVELS</h1>
             <h2 class="subtitle">YADURAJ TOUR AND TRAVELS Neem Ka Thana</h2>
             <div class="hero-content">
@@ -35,7 +38,7 @@
                         sizes="(max-width: 2560px) 100vw, 2560px">
                 </div>
                 <div class="hero-text">
-                    <div class="elementor-widget-container">
+                    <div class="elementor-widget-container" id="services">
                         <p>Travel together, travel in luxury. At YADURAJ TOUR AND TRAVELS, our <strong>Luxury Tempo
                                 Traveller in Neem ka thana </strong> rentals combine everything you need –
                             <strong>comfort, generous space, and in addition to unforgettable group travel
@@ -43,7 +46,7 @@
                             corporate retreat, or spiritual pilgrimage, our meticulously maintained luxury fleet and
                             skilled drivers ensure <strong>safety, cleanliness, and effortless journeys.We know that
                                 when you’re on the road, comfort matters most.</p>
-                        <ul>
+                        <ul id="about">
                             <li>
                                 <p><strong>Spacious Recliner Seating</strong>: Choose from 13 to 17-seater luxury
                                     options in our Tempo Travellers.</p>
@@ -77,7 +80,7 @@
             <img src="public\phone.png" alt="Call" title="Calling">
         </a>
     </div>
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer">
         <div class="container footer-inner">
             <p class="footer-brand">© 2025 YADURAJ TOUR AND TRAVELS</p>
             <p class="footer-contact">Neem Ka Thana • <a href="tel:+919351886506">+91 9351886506</a></p>
