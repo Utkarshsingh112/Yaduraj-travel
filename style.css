@@ -1,3 +1,76 @@
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+}
+.menu-toggle .bar {
+    width: 28px;
+    height: 4px;
+    background: var(--brand);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+    .navbar ul {
+        position: absolute;
+        top: 60px;
+        right: 16px;
+        background: var(--surface);
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        border-radius: 10px;
+        padding: 18px 0;
+        min-width: 160px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s, transform 0.3s;
+        z-index: 150;
+    }
+    .navbar ul.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    .navbar ul li {
+        margin: 0;
+        padding: 0;
+    }
+    .navbar ul li a {
+        display: block;
+        padding: 12px 24px;
+        border-radius: 0;
+        border-bottom: 1px solid var(--border);
+    }
+    .navbar ul li:last-child a {
+        border-bottom: none;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .navbar {
+        position: relative;
+    }
+}
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
